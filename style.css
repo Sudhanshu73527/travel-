@@ -1,0 +1,362 @@
+:root{
+    --primary-color:#669ccb;
+    --primary-color-dark:#0482f1;
+    --secondary-color:#e8f1fa;
+    --text-dark:#282d31;
+    --text-light:#767;
+    --extra-light:#f3f4f6;
+    --max-width:1200px;
+
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#section-cont{
+    padding: 5rem 1rem;
+    max-width: var(--max-width);
+    margin: auto;
+
+}
+.section-tittle{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.section-subtittle{
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--primary-color);
+    margin-bottom: 5rem;
+    text-align: center;
+}
+img{
+    width: 100%;
+}
+
+body{
+    font-family:serif;
+
+}
+
+
+nav{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2rem 1rem;
+    width: 100%;
+    max-width: var(--max-width);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav-logo a{
+    text-decoration: none;
+    color: var(--extra-light);
+    font-size: 1.5rem;
+}
+.nav-links{
+    display: none;
+    list-style: none;
+    align-items: center;
+    gap: 2rem;
+}
+
+.link{
+    color: rgb(176, 253, 22);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1.3rem;
+}
+.link:hover{
+    color:whitesmoke;
+}
+
+header{
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(main3.jpg.jpg);
+}
+
+header #section-cont{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#header-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    color: var(--extra-light);
+}
+
+#header-cont h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 5rem;
+}
+
+#header-cont p{
+    text-align: center;
+    color: rgb(176, 253, 22);
+    font-size: 1.3rem;
+}
+
+#header-cont button{
+    padding: 1rem 2rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    border-color: var(--primary-color);
+    /* color: var(--extra-light); */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 2s;
+}
+#header-cont button:hover{
+    background-color: rgb(176, 253, 22);
+}
+
+.jorney-cont{
+    background-color: var(--secondary-color);
+}
+
+.journey-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+.country-card{
+    background-color: var(--extra-light);
+
+}
+.country-name{
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-light);
+    cursor: pointer;
+}
+
+.country-name i{
+    font-size: 1.2rem;
+}
+.country-name span{
+    font-style: italic;
+}
+
+
+@media(min-width:640px){
+    .nav-links{
+        display: flex;
+
+    }
+
+    header .section-cont{
+        justify-content: flex-start;
+    }
+    .header-cont{
+        max-width: 400px;
+        align-items: flex-start;
+    }
+    .header-cont p{
+        text-align: left;
+    }
+    .journey-grid{
+        grid-template-columns: repeat(3,1fr);
+        gap: 1rem;
+    }
+    .display-grid{
+        grid-template-columns: repeat(4,1fr);
+    }
+    .display-card{
+        gap: 0;
+    }
+    .display-card i{
+        font-size: 1.75rem;
+    }
+    .display-card h4{
+        font-size: 1rem;
+    }
+    .display-card p{
+        font-size: 0.7rem;
+    }
+}
+
+.journey-grid{
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+}
+
+
+.banner-cont{
+    background-image: url(mount.jpg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-cont .section-cont{
+    padding: 10rem 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.banner-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+    color: var(--extra-light);
+}
+
+.banner-content h2{
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.banner-content button{
+    padding: .5rem 2rem;
+    outline: none;
+    border: 2px solid var(--secondary-color);
+    background-color: transparent;
+    color: var(--secondary-color);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+@media(min-width: 786px){
+    .banner-cont .section-cont{
+        justify-content: flex-end;
+    }
+    .banner-content{
+        align-items: flex-end;
+        text-align: right;
+        max-width: 800px;
+    }
+    .display-card{
+        gap: .5rem;
+
+    }
+    .display-card i{
+        font-size: 2.5rem;
+    }
+    .display-card p{
+        font-size: 0.8rem;
+    }
+}
+
+
+.display-cont{
+    background-color: var(--secondary-color);
+
+}
+.display-cont:is(.section-tittle, .section-subtittle){
+    color: var(--text-dark);
+
+}
+
+.display-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+
+.display-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: .5rem;
+    background-color: var(--extra-light);
+    text-align: center;
+}
+
+.display-card i{
+    font-size: 2rem;
+    color: var(--primary-color);
+
+}
+
+.display-card h4{
+    font-size: 1rem;
+    font-weight: 500;
+    padding:  0 1rem;
+    color: var(--text-dark);
+}
+.display-card p{
+    font-size: .8rem;
+    padding: 0 1rem;
+    color: var(--text-dark);
+
+}
+
+.display-grid.grid-1{
+    grid-area: 1/1/3/3;
+
+}
+
+
+@media(min-width: 1024px){
+    .display-card{
+        gap: 1rem;
+    }
+    .display-card i{
+        font-size: 3rem;
+    }
+    .display-card h4{
+        font-size: 1.5rem;
+    }
+    .display-card p{
+        font-size: 1rem;
+    }
+}
+
+footer{
+    background-color: var(--text-dark);
+    color: var(--secondary-color);
+}
+
+footer .section-cont{
+    display: grid;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+footer h4{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.social-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.social-icons i{
+    padding: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+footer p{
+    font-style: italic;
+}
